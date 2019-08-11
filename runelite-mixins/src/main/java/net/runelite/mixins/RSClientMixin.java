@@ -1394,7 +1394,8 @@ public abstract class RSClientMixin implements RSClient
 	@MethodHook(value = "processReceivedPacket", end = true)
 	public void printReceivedPacket(RSPacketWriter writer)
 	{
-		if(writer != null && writer.getCurrentIncomingPacket() != null) {
+		if(writer != null && writer.getCurrentIncomingPacket() != null &&
+			writer.getCurrentIncomingPacket().getID() != 33 && writer.getCurrentIncomingPacket().getID() != 79) {
 			client.getLogger().info("[Incoming Packet]: ID: {} Size: {}", writer.getCurrentIncomingPacket().getID(), writer.getCurrentIncomingPacket().getLength());
 		}
 	}

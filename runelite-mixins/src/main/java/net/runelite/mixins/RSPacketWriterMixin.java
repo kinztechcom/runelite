@@ -15,12 +15,11 @@ public abstract class RSPacketWriterMixin implements RSPacketWriter
     @Shadow("client")
     private static RSClient client;
 
-    private static int[] OUT_PACKET_IGNORE = new int[] {};
-
     @Inject
     @MethodHook(value = "writePacket", end = true)
     public final void printOutgoingPacket(RSPacketBufferNode node) {
-        if(node != null && node.getClientPacket() != null) {
+        if(node != null && node.getClientPacket() != null &&
+            node.getClientPacket().getID() != 22 && node.getClientPacket().getID() != 34) {
             client.getLogger().info("[Outgoing Packet]: ID: {} Size: {}", node.getClientPacket().getID(), node.getClientPacket().getLength());
         }
     }
