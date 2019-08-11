@@ -1751,4 +1751,13 @@ public interface Client extends GameShell
 	 * Returns the max item index + 1 from cache
 	 */
 	int getItemCount();
+
+	/**
+	 * Process a received client packet.
+	 * @param writer
+	 * @return
+	 */
+	boolean processReceivedPacket(PacketWriter writer);
+
+	PacketWriter getPacketWriter();
 }

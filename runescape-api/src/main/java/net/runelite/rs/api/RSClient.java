@@ -1049,4 +1049,10 @@ public interface RSClient extends RSGameShell, Client
 
 	@Import("ItemDefinition_fileCount")
 	int getItemCount();
+
+	@Import("packetWriter")
+	RSPacketWriter getPacketWriter();
+
+	@Import("processReceivedPacket")
+	boolean processReceivedPacket(RSPacketWriter writer);
 }

@@ -82,7 +82,7 @@ public class Messages {
 			var8.packetBuffer.method5475(MusicPatchNode2.baseX * 64 + var0);
 			var8.packetBuffer.writeShort(var3);
 			var8.packetBuffer.writeShortLE(class4.selectedItemId);
-			Client.packetWriter.method2219(var8);
+			Client.packetWriter.writePacket(var8);
 		} else if (var2 == 2) {
 			Client.mouseCrossX = var6;
 			Client.mouseCrossY = var7;
@@ -97,7 +97,7 @@ public class Messages {
 			var8.packetBuffer.writeIntLE16(WorldMapEvent.field359);
 			var8.packetBuffer.writeShort(Client.field848);
 			var8.packetBuffer.writeShortLE(class1.baseY * 64 + var1);
-			Client.packetWriter.method2219(var8);
+			Client.packetWriter.writePacket(var8);
 		} else if (var2 == 3) {
 			Client.mouseCrossX = var6;
 			Client.mouseCrossY = var7;
@@ -110,7 +110,7 @@ public class Messages {
 			var8.packetBuffer.method5502(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 			var8.packetBuffer.method5530(var3);
 			var8.packetBuffer.method5475(MusicPatchNode2.baseX * 64 + var0);
-			Client.packetWriter.method2219(var8);
+			Client.packetWriter.writePacket(var8);
 		} else if (var2 == 4) {
 			Client.mouseCrossX = var6;
 			Client.mouseCrossY = var7;
@@ -123,7 +123,7 @@ public class Messages {
 			var8.packetBuffer.writeShort(var3);
 			var8.packetBuffer.writeShort(class1.baseY * 64 + var1);
 			var8.packetBuffer.writeShort(MusicPatchNode2.baseX * 64 + var0);
-			Client.packetWriter.method2219(var8);
+			Client.packetWriter.writePacket(var8);
 		} else if (var2 == 5) {
 			Client.mouseCrossX = var6;
 			Client.mouseCrossY = var7;
@@ -136,7 +136,7 @@ public class Messages {
 			var8.packetBuffer.method5530(var3);
 			var8.packetBuffer.method5475(class1.baseY * 64 + var1);
 			var8.packetBuffer.method5520(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
-			Client.packetWriter.method2219(var8);
+			Client.packetWriter.writePacket(var8);
 		} else if (var2 == 6) {
 			Client.mouseCrossX = var6;
 			Client.mouseCrossY = var7;
@@ -149,7 +149,7 @@ public class Messages {
 			var8.packetBuffer.method5530(class1.baseY * 64 + var1);
 			var8.packetBuffer.method5530(MusicPatchNode2.baseX * 64 + var0);
 			var8.packetBuffer.writeShortLE(var3);
-			Client.packetWriter.method2219(var8);
+			Client.packetWriter.writePacket(var8);
 		} else {
 			PacketBufferNode var9;
 			NPC var13;
@@ -168,7 +168,7 @@ public class Messages {
 					var9.packetBuffer.method5475(var3);
 					var9.packetBuffer.method5521(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 					var9.packetBuffer.writeInt(MouseRecorder.selectedItemWidget);
-					Client.packetWriter.method2219(var9);
+					Client.packetWriter.writePacket(var9);
 				}
 			} else if (var2 == 8) {
 				var13 = Client.npcs[var3];
@@ -184,7 +184,7 @@ public class Messages {
 					var9.packetBuffer.method5521(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 					var9.packetBuffer.writeIntLE(WorldMapEvent.field359);
 					var9.packetBuffer.method5530(Client.field848);
-					Client.packetWriter.method2219(var9);
+					Client.packetWriter.writePacket(var9);
 				}
 			} else if (var2 == 9) {
 				var13 = Client.npcs[var3];
@@ -198,7 +198,7 @@ public class Messages {
 					var9 = Archive.method4265(ClientPacket.field2274, Client.packetWriter.isaacCipher);
 					var9.packetBuffer.method5521(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 					var9.packetBuffer.writeShortLE(var3);
-					Client.packetWriter.method2219(var9);
+					Client.packetWriter.writePacket(var9);
 				}
 			} else if (var2 == 10) {
 				var13 = Client.npcs[var3];
@@ -212,7 +212,7 @@ public class Messages {
 					var9 = Archive.method4265(ClientPacket.field2204, Client.packetWriter.isaacCipher);
 					var9.packetBuffer.method5530(var3);
 					var9.packetBuffer.writeByte(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
-					Client.packetWriter.method2219(var9);
+					Client.packetWriter.writePacket(var9);
 				}
 			} else if (var2 == 11) {
 				var13 = Client.npcs[var3];
@@ -226,7 +226,7 @@ public class Messages {
 					var9 = Archive.method4265(ClientPacket.field2254, Client.packetWriter.isaacCipher);
 					var9.packetBuffer.method5475(var3);
 					var9.packetBuffer.writeByte(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
-					Client.packetWriter.method2219(var9);
+					Client.packetWriter.writePacket(var9);
 				}
 			} else if (var2 == 12) {
 				var13 = Client.npcs[var3];
@@ -240,7 +240,7 @@ public class Messages {
 					var9 = Archive.method4265(ClientPacket.field2303, Client.packetWriter.isaacCipher);
 					var9.packetBuffer.writeShort(var3);
 					var9.packetBuffer.method5520(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
-					Client.packetWriter.method2219(var9);
+					Client.packetWriter.writePacket(var9);
 				}
 			} else if (var2 == 13) {
 				var13 = Client.npcs[var3];
@@ -254,7 +254,7 @@ public class Messages {
 					var9 = Archive.method4265(ClientPacket.field2214, Client.packetWriter.isaacCipher);
 					var9.packetBuffer.writeByte(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 					var9.packetBuffer.method5530(var3);
-					Client.packetWriter.method2219(var9);
+					Client.packetWriter.writePacket(var9);
 				}
 			} else {
 				Player var15;
@@ -273,7 +273,7 @@ public class Messages {
 						var9.packetBuffer.writeIntME(MouseRecorder.selectedItemWidget);
 						var9.packetBuffer.writeShort(var3);
 						var9.packetBuffer.writeShort(class4.selectedItemId);
-						Client.packetWriter.method2219(var9);
+						Client.packetWriter.writePacket(var9);
 					}
 				} else if (var2 == 15) {
 					var15 = Client.players[var3];
@@ -289,7 +289,7 @@ public class Messages {
 						var9.packetBuffer.method5502(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 						var9.packetBuffer.method5530(Client.field848);
 						var9.packetBuffer.writeShort(var3);
-						Client.packetWriter.method2219(var9);
+						Client.packetWriter.writePacket(var9);
 					}
 				} else if (var2 == 16) {
 					Client.mouseCrossX = var6;
@@ -306,7 +306,7 @@ public class Messages {
 					var8.packetBuffer.method5475(var3);
 					var8.packetBuffer.method5475(MusicPatchNode2.baseX * 64 + var0);
 					var8.packetBuffer.writeShortLE(class1.baseY * 64 + var1);
-					Client.packetWriter.method2219(var8);
+					Client.packetWriter.writePacket(var8);
 				} else if (var2 == 17) {
 					Client.mouseCrossX = var6;
 					Client.mouseCrossY = var7;
@@ -321,7 +321,7 @@ public class Messages {
 					var8.packetBuffer.method5530(MusicPatchNode2.baseX * 64 + var0);
 					var8.packetBuffer.method5520(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 					var8.packetBuffer.writeShortLE(var3);
-					Client.packetWriter.method2219(var8);
+					Client.packetWriter.writePacket(var8);
 				} else if (var2 == 18) {
 					Client.mouseCrossX = var6;
 					Client.mouseCrossY = var7;
@@ -334,7 +334,7 @@ public class Messages {
 					var8.packetBuffer.writeShortLE(var3);
 					var8.packetBuffer.writeShortLE(MusicPatchNode2.baseX * 64 + var0);
 					var8.packetBuffer.writeByte(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
-					Client.packetWriter.method2219(var8);
+					Client.packetWriter.writePacket(var8);
 				} else if (var2 == 19) {
 					Client.mouseCrossX = var6;
 					Client.mouseCrossY = var7;
@@ -347,7 +347,7 @@ public class Messages {
 					var8.packetBuffer.method5530(MusicPatchNode2.baseX * 64 + var0);
 					var8.packetBuffer.writeShort(class1.baseY * 64 + var1);
 					var8.packetBuffer.writeByte(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
-					Client.packetWriter.method2219(var8);
+					Client.packetWriter.writePacket(var8);
 				} else if (var2 == 20) {
 					Client.mouseCrossX = var6;
 					Client.mouseCrossY = var7;
@@ -360,7 +360,7 @@ public class Messages {
 					var8.packetBuffer.method5502(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 					var8.packetBuffer.writeShortLE(MusicPatchNode2.baseX * 64 + var0);
 					var8.packetBuffer.writeShortLE(var3);
-					Client.packetWriter.method2219(var8);
+					Client.packetWriter.writePacket(var8);
 				} else if (var2 == 21) {
 					Client.mouseCrossX = var6;
 					Client.mouseCrossY = var7;
@@ -373,7 +373,7 @@ public class Messages {
 					var8.packetBuffer.writeShortLE(var3);
 					var8.packetBuffer.writeShort(MusicPatchNode2.baseX * 64 + var0);
 					var8.packetBuffer.method5502(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
-					Client.packetWriter.method2219(var8);
+					Client.packetWriter.writePacket(var8);
 				} else if (var2 == 22) {
 					Client.mouseCrossX = var6;
 					Client.mouseCrossY = var7;
@@ -386,7 +386,7 @@ public class Messages {
 					var8.packetBuffer.method5475(var3);
 					var8.packetBuffer.method5530(class1.baseY * 64 + var1);
 					var8.packetBuffer.writeShort(MusicPatchNode2.baseX * 64 + var0);
-					Client.packetWriter.method2219(var8);
+					Client.packetWriter.writePacket(var8);
 				} else if (var2 == 23) {
 					if (Client.isMenuOpen) {
 						GrandExchangeOfferWorldComparator.scene.method3104();
@@ -406,7 +406,7 @@ public class Messages {
 						if (var12) {
 							var10 = Archive.method4265(ClientPacket.field2272, Client.packetWriter.isaacCipher);
 							var10.packetBuffer.writeInt(var1);
-							Client.packetWriter.method2219(var10);
+							Client.packetWriter.writePacket(var10);
 						}
 					} else {
 						if (var2 == 25) {
@@ -438,7 +438,7 @@ public class Messages {
 							if (var2 == 28) {
 								var8 = Archive.method4265(ClientPacket.field2272, Client.packetWriter.isaacCipher);
 								var8.packetBuffer.writeInt(var1);
-								Client.packetWriter.method2219(var8);
+								Client.packetWriter.writePacket(var8);
 								var14 = class80.getWidget(var1);
 								if (var14.cs1Instructions != null && var14.cs1Instructions[0][0] == 5) {
 									var11 = var14.cs1Instructions[0][1];
@@ -448,7 +448,7 @@ public class Messages {
 							} else if (var2 == 29) {
 								var8 = Archive.method4265(ClientPacket.field2272, Client.packetWriter.isaacCipher);
 								var8.packetBuffer.writeInt(var1);
-								Client.packetWriter.method2219(var8);
+								Client.packetWriter.writePacket(var8);
 								var14 = class80.getWidget(var1);
 								if (var14.cs1Instructions != null && var14.cs1Instructions[0][0] == 5) {
 									var11 = var14.cs1Instructions[0][1];
@@ -471,7 +471,7 @@ public class Messages {
 								var8.packetBuffer.writeShortLE(class4.selectedItemId);
 								var8.packetBuffer.writeShortLE(var0);
 								var8.packetBuffer.method5475(var3);
-								Client.packetWriter.method2219(var8);
+								Client.packetWriter.writePacket(var8);
 								Client.field759 = 0;
 								ItemContainer.field549 = class80.getWidget(var1);
 								Client.field698 = var0;
@@ -482,7 +482,7 @@ public class Messages {
 								var8.packetBuffer.writeShort(var0);
 								var8.packetBuffer.writeShortLE(var3);
 								var8.packetBuffer.writeShortLE(Client.field848);
-								Client.packetWriter.method2219(var8);
+								Client.packetWriter.writePacket(var8);
 								Client.field759 = 0;
 								ItemContainer.field549 = class80.getWidget(var1);
 								Client.field698 = var0;
@@ -491,7 +491,7 @@ public class Messages {
 								var8.packetBuffer.writeShortLE(var3);
 								var8.packetBuffer.writeIntME(var1);
 								var8.packetBuffer.writeShort(var0);
-								Client.packetWriter.method2219(var8);
+								Client.packetWriter.writePacket(var8);
 								Client.field759 = 0;
 								ItemContainer.field549 = class80.getWidget(var1);
 								Client.field698 = var0;
@@ -500,7 +500,7 @@ public class Messages {
 								var8.packetBuffer.method5530(var3);
 								var8.packetBuffer.writeIntLE16(var1);
 								var8.packetBuffer.method5475(var0);
-								Client.packetWriter.method2219(var8);
+								Client.packetWriter.writePacket(var8);
 								Client.field759 = 0;
 								ItemContainer.field549 = class80.getWidget(var1);
 								Client.field698 = var0;
@@ -509,7 +509,7 @@ public class Messages {
 								var8.packetBuffer.writeIntLE(var1);
 								var8.packetBuffer.method5475(var0);
 								var8.packetBuffer.method5475(var3);
-								Client.packetWriter.method2219(var8);
+								Client.packetWriter.writePacket(var8);
 								Client.field759 = 0;
 								ItemContainer.field549 = class80.getWidget(var1);
 								Client.field698 = var0;
@@ -518,7 +518,7 @@ public class Messages {
 								var8.packetBuffer.method5475(var3);
 								var8.packetBuffer.writeInt(var1);
 								var8.packetBuffer.method5475(var0);
-								Client.packetWriter.method2219(var8);
+								Client.packetWriter.writePacket(var8);
 								Client.field759 = 0;
 								ItemContainer.field549 = class80.getWidget(var1);
 								Client.field698 = var0;
@@ -527,7 +527,7 @@ public class Messages {
 								var8.packetBuffer.writeInt(var1);
 								var8.packetBuffer.writeShort(var0);
 								var8.packetBuffer.writeShort(var3);
-								Client.packetWriter.method2219(var8);
+								Client.packetWriter.writePacket(var8);
 								Client.field759 = 0;
 								ItemContainer.field549 = class80.getWidget(var1);
 								Client.field698 = var0;
@@ -553,7 +553,7 @@ public class Messages {
 									var8.packetBuffer.method5475(var3);
 									var8.packetBuffer.writeIntLE16(var1);
 									var8.packetBuffer.writeShortLE(var0);
-									Client.packetWriter.method2219(var8);
+									Client.packetWriter.writePacket(var8);
 									Client.field759 = 0;
 									ItemContainer.field549 = class80.getWidget(var1);
 									Client.field698 = var0;
@@ -562,7 +562,7 @@ public class Messages {
 									var8.packetBuffer.writeIntLE16(var1);
 									var8.packetBuffer.writeShortLE(var0);
 									var8.packetBuffer.method5530(var3);
-									Client.packetWriter.method2219(var8);
+									Client.packetWriter.writePacket(var8);
 									Client.field759 = 0;
 									ItemContainer.field549 = class80.getWidget(var1);
 									Client.field698 = var0;
@@ -571,7 +571,7 @@ public class Messages {
 									var8.packetBuffer.writeIntLE(var1);
 									var8.packetBuffer.method5530(var0);
 									var8.packetBuffer.writeShort(var3);
-									Client.packetWriter.method2219(var8);
+									Client.packetWriter.writePacket(var8);
 									Client.field759 = 0;
 									ItemContainer.field549 = class80.getWidget(var1);
 									Client.field698 = var0;
@@ -580,7 +580,7 @@ public class Messages {
 									var8.packetBuffer.writeInt(var1);
 									var8.packetBuffer.method5530(var0);
 									var8.packetBuffer.writeShort(var3);
-									Client.packetWriter.method2219(var8);
+									Client.packetWriter.writePacket(var8);
 									Client.field759 = 0;
 									ItemContainer.field549 = class80.getWidget(var1);
 									Client.field698 = var0;
@@ -589,7 +589,7 @@ public class Messages {
 									var8.packetBuffer.writeShort(var3);
 									var8.packetBuffer.writeIntME(var1);
 									var8.packetBuffer.writeShort(var0);
-									Client.packetWriter.method2219(var8);
+									Client.packetWriter.writePacket(var8);
 									Client.field759 = 0;
 									ItemContainer.field549 = class80.getWidget(var1);
 									Client.field698 = var0;
@@ -605,7 +605,7 @@ public class Messages {
 										var9 = Archive.method4265(ClientPacket.field2250, Client.packetWriter.isaacCipher);
 										var9.packetBuffer.writeShort(var3);
 										var9.packetBuffer.method5521(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
-										Client.packetWriter.method2219(var9);
+										Client.packetWriter.writePacket(var9);
 									}
 								} else if (var2 == 45) {
 									var15 = Client.players[var3];
@@ -619,7 +619,7 @@ public class Messages {
 										var9 = Archive.method4265(ClientPacket.field2301, Client.packetWriter.isaacCipher);
 										var9.packetBuffer.method5520(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 										var9.packetBuffer.method5530(var3);
-										Client.packetWriter.method2219(var9);
+										Client.packetWriter.writePacket(var9);
 									}
 								} else if (var2 == 46) {
 									var15 = Client.players[var3];
@@ -633,7 +633,7 @@ public class Messages {
 										var9 = Archive.method4265(ClientPacket.field2209, Client.packetWriter.isaacCipher);
 										var9.packetBuffer.method5530(var3);
 										var9.packetBuffer.writeByte(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
-										Client.packetWriter.method2219(var9);
+										Client.packetWriter.writePacket(var9);
 									}
 								} else if (var2 == 47) {
 									var15 = Client.players[var3];
@@ -647,7 +647,7 @@ public class Messages {
 										var9 = Archive.method4265(ClientPacket.field2230, Client.packetWriter.isaacCipher);
 										var9.packetBuffer.method5475(var3);
 										var9.packetBuffer.method5521(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
-										Client.packetWriter.method2219(var9);
+										Client.packetWriter.writePacket(var9);
 									}
 								} else if (var2 == 48) {
 									var15 = Client.players[var3];
@@ -661,7 +661,7 @@ public class Messages {
 										var9 = Archive.method4265(ClientPacket.field2241, Client.packetWriter.isaacCipher);
 										var9.packetBuffer.method5520(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 										var9.packetBuffer.method5530(var3);
-										Client.packetWriter.method2219(var9);
+										Client.packetWriter.writePacket(var9);
 									}
 								} else if (var2 == 49) {
 									var15 = Client.players[var3];
@@ -675,7 +675,7 @@ public class Messages {
 										var9 = Archive.method4265(ClientPacket.field2257, Client.packetWriter.isaacCipher);
 										var9.packetBuffer.method5530(var3);
 										var9.packetBuffer.method5502(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
-										Client.packetWriter.method2219(var9);
+										Client.packetWriter.writePacket(var9);
 									}
 								} else if (var2 == 50) {
 									var15 = Client.players[var3];
@@ -689,7 +689,7 @@ public class Messages {
 										var9 = Archive.method4265(ClientPacket.field2278, Client.packetWriter.isaacCipher);
 										var9.packetBuffer.method5502(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 										var9.packetBuffer.writeShortLE(var3);
-										Client.packetWriter.method2219(var9);
+										Client.packetWriter.writePacket(var9);
 									}
 								} else if (var2 == 51) {
 									var15 = Client.players[var3];
@@ -703,7 +703,7 @@ public class Messages {
 										var9 = Archive.method4265(ClientPacket.field2253, Client.packetWriter.isaacCipher);
 										var9.packetBuffer.method5521(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 										var9.packetBuffer.method5475(var3);
-										Client.packetWriter.method2219(var9);
+										Client.packetWriter.writePacket(var9);
 									}
 								} else {
 									label926: {
@@ -718,7 +718,7 @@ public class Messages {
 													var9.packetBuffer.method5475(var0);
 													var9.packetBuffer.writeInt(WorldMapEvent.field359);
 													var9.packetBuffer.method5475(var16.itemId);
-													Client.packetWriter.method2219(var9);
+													Client.packetWriter.writePacket(var9);
 												}
 												break label926;
 											}
@@ -735,7 +735,7 @@ public class Messages {
 												var8.packetBuffer.method5520(KeyHandler.KeyHandler_pressedKeys[82] ? 1 : 0);
 												var8.packetBuffer.method5530(MusicPatchNode2.baseX * 64 + var0);
 												var8.packetBuffer.method5475(class1.baseY * 64 + var1);
-												Client.packetWriter.method2219(var8);
+												Client.packetWriter.writePacket(var8);
 												break label926;
 											}
 
@@ -746,7 +746,7 @@ public class Messages {
 												Client.mouseCrossState = 0;
 												var8 = Archive.method4265(ClientPacket.field2244, Client.packetWriter.isaacCipher);
 												var8.packetBuffer.method5530(var3);
-												Client.packetWriter.method2219(var8);
+												Client.packetWriter.writePacket(var8);
 												break label926;
 											}
 
@@ -765,7 +765,7 @@ public class Messages {
 													if (var17 != null) {
 														var10 = Archive.method4265(ClientPacket.field2233, Client.packetWriter.isaacCipher);
 														var10.packetBuffer.method5530(var17.id);
-														Client.packetWriter.method2219(var10);
+														Client.packetWriter.writePacket(var10);
 													}
 												}
 												break label926;
@@ -778,7 +778,7 @@ public class Messages {
 												Client.mouseCrossState = 0;
 												var8 = Archive.method4265(ClientPacket.field2227, Client.packetWriter.isaacCipher);
 												var8.packetBuffer.writeShortLE(var3);
-												Client.packetWriter.method2219(var8);
+												Client.packetWriter.writePacket(var8);
 												break label926;
 											}
 
@@ -789,7 +789,7 @@ public class Messages {
 												} else {
 													var9 = Archive.method4265(ClientPacket.field2227, Client.packetWriter.isaacCipher);
 													var9.packetBuffer.writeShortLE(var3);
-													Client.packetWriter.method2219(var9);
+													Client.packetWriter.writePacket(var9);
 												}
 
 												Client.field759 = 0;
@@ -871,7 +871,7 @@ public class Messages {
 				var10.packetBuffer.writeInt(var1);
 				var10.packetBuffer.writeShort(var2);
 				var10.packetBuffer.writeShort(var3);
-				Client.packetWriter.method2219(var10);
+				Client.packetWriter.writePacket(var10);
 			}
 
 			if (var0 == 2) {
@@ -879,7 +879,7 @@ public class Messages {
 				var10.packetBuffer.writeInt(var1);
 				var10.packetBuffer.writeShort(var2);
 				var10.packetBuffer.writeShort(var3);
-				Client.packetWriter.method2219(var10);
+				Client.packetWriter.writePacket(var10);
 			}
 
 			if (var0 == 3) {
@@ -887,7 +887,7 @@ public class Messages {
 				var10.packetBuffer.writeInt(var1);
 				var10.packetBuffer.writeShort(var2);
 				var10.packetBuffer.writeShort(var3);
-				Client.packetWriter.method2219(var10);
+				Client.packetWriter.writePacket(var10);
 			}
 
 			if (var0 == 4) {
@@ -895,7 +895,7 @@ public class Messages {
 				var10.packetBuffer.writeInt(var1);
 				var10.packetBuffer.writeShort(var2);
 				var10.packetBuffer.writeShort(var3);
-				Client.packetWriter.method2219(var10);
+				Client.packetWriter.writePacket(var10);
 			}
 
 			if (var0 == 5) {
@@ -903,7 +903,7 @@ public class Messages {
 				var10.packetBuffer.writeInt(var1);
 				var10.packetBuffer.writeShort(var2);
 				var10.packetBuffer.writeShort(var3);
-				Client.packetWriter.method2219(var10);
+				Client.packetWriter.writePacket(var10);
 			}
 
 			if (var0 == 6) {
@@ -911,7 +911,7 @@ public class Messages {
 				var10.packetBuffer.writeInt(var1);
 				var10.packetBuffer.writeShort(var2);
 				var10.packetBuffer.writeShort(var3);
-				Client.packetWriter.method2219(var10);
+				Client.packetWriter.writePacket(var10);
 			}
 
 			if (var0 == 7) {
@@ -919,7 +919,7 @@ public class Messages {
 				var10.packetBuffer.writeInt(var1);
 				var10.packetBuffer.writeShort(var2);
 				var10.packetBuffer.writeShort(var3);
-				Client.packetWriter.method2219(var10);
+				Client.packetWriter.writePacket(var10);
 			}
 
 			if (var0 == 8) {
@@ -927,7 +927,7 @@ public class Messages {
 				var10.packetBuffer.writeInt(var1);
 				var10.packetBuffer.writeShort(var2);
 				var10.packetBuffer.writeShort(var3);
-				Client.packetWriter.method2219(var10);
+				Client.packetWriter.writePacket(var10);
 			}
 
 			if (var0 == 9) {
@@ -935,7 +935,7 @@ public class Messages {
 				var10.packetBuffer.writeInt(var1);
 				var10.packetBuffer.writeShort(var2);
 				var10.packetBuffer.writeShort(var3);
-				Client.packetWriter.method2219(var10);
+				Client.packetWriter.writePacket(var10);
 			}
 
 			if (var0 == 10) {
@@ -943,7 +943,7 @@ public class Messages {
 				var10.packetBuffer.writeInt(var1);
 				var10.packetBuffer.writeShort(var2);
 				var10.packetBuffer.writeShort(var3);
-				Client.packetWriter.method2219(var10);
+				Client.packetWriter.writePacket(var10);
 			}
 
 		}

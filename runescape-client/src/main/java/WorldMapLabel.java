@@ -135,6 +135,6 @@ public class WorldMapLabel {
 		var4.packetBuffer.writeShortLE(var1);
 		var4.packetBuffer.method5521(var2);
 		var4.packetBuffer.writeShort(var0);
-		Client.packetWriter.method2219(var4);
+		Client.packetWriter.writePacket(var4);
 	}
 }

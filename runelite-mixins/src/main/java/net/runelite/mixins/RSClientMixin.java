@@ -54,6 +54,7 @@ import net.runelite.api.MessageNode;
 import net.runelite.api.NPC;
 import net.runelite.api.Node;
 import static net.runelite.api.Perspective.LOCAL_TILE_SIZE;
+import net.runelite.api.PacketWriter;
 import net.runelite.api.Player;
 import net.runelite.api.Point;
 import net.runelite.api.Prayer;
@@ -129,6 +130,7 @@ import net.runelite.rs.api.RSItemContainer;
 import net.runelite.rs.api.RSNPC;
 import net.runelite.rs.api.RSNodeDeque;
 import net.runelite.rs.api.RSNodeHashTable;
+import net.runelite.rs.api.RSPacketWriter;
 import net.runelite.rs.api.RSPlayer;
 import net.runelite.rs.api.RSSprite;
 import net.runelite.rs.api.RSUsername;
@@ -1386,6 +1388,15 @@ public abstract class RSClientMixin implements RSClient
 	{
 		int flags = getFlags();
 		return WorldType.fromMask(flags);
+	}
+
+	@Inject
+	@MethodHook(value = "processReceivedPacket", end = true)
+	public void printReceivedPacket(RSPacketWriter writer)
+	{
+		if(writer != null && writer.getCurrentIncomingPacket() != null) {
+			client.getLogger().info("[Incoming Packet]: ID: {} Size: {}", writer.getCurrentIncomingPacket().getID(), writer.getCurrentIncomingPacket().getLength());
+		}
 	}
 
 	@Inject

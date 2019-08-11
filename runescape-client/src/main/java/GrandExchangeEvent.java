@@ -114,7 +114,7 @@ public class GrandExchangeEvent {
 	)
 	static final void method73() {
 		PacketBufferNode var0 = Archive.method4265(ClientPacket.field2223, Client.packetWriter.isaacCipher);
-		Client.packetWriter.method2219(var0);
+		Client.packetWriter.writePacket(var0);
 
 		for (InterfaceParent var1 = (InterfaceParent)Client.interfaceParents.first(); var1 != null; var1 = (InterfaceParent)Client.interfaceParents.next()) {
 			if (var1.type == 0 || var1.type == 3) {

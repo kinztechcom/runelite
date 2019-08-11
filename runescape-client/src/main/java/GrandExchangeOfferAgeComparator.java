@@ -205,7 +205,7 @@ final class GrandExchangeOfferAgeComparator implements Comparator {
 		if (var1 == 326) {
 			PacketBufferNode var4 = Archive.method4265(ClientPacket.field2215, Client.packetWriter.isaacCipher);
 			Client.playerAppearance.write(var4.packetBuffer);
-			Client.packetWriter.method2219(var4);
+			Client.packetWriter.writePacket(var4);
 			return true;
 		}
 		return false;

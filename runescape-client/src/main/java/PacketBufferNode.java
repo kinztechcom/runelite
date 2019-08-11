@@ -571,7 +571,7 @@ public class PacketBufferNode extends Node {
 				if (WorldMapSprite.client.hasFrame()) {
 					var58 = Archive.method4265(ClientPacket.field2212, Client.packetWriter.isaacCipher);
 					var58.packetBuffer.writeInt(1057001181);
-					Client.packetWriter.method2219(var58);
+					Client.packetWriter.writePacket(var58);
 				}
 
 				if (!Client.isInInstance) {
@@ -594,7 +594,7 @@ public class PacketBufferNode extends Node {
 				class186.playPcmPlayers();
 				KeyHandler.method787();
 				var58 = Archive.method4265(ClientPacket.field2279, Client.packetWriter.isaacCipher);
-				Client.packetWriter.method2219(var58);
+				Client.packetWriter.writePacket(var58);
 				WallDecoration.method3291();
 			}
 		}

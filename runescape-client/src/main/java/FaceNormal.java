@@ -87,8 +87,8 @@ public class FaceNormal {
 		Client.packetWriter.method2218();
 		Client.packetWriter.packetBuffer.offset = 0;
 		Client.packetWriter.serverPacket = null;
-		Client.packetWriter.field1309 = null;
-		Client.packetWriter.field1321 = null;
+		Client.packetWriter.currentIncomingPacket = null;
+		Client.packetWriter.previousIncomingPacket = null;
 		Client.packetWriter.field1317 = null;
 		Client.packetWriter.serverPacketLength = 0;
 		Client.packetWriter.field1318 = 0;

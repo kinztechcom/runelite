@@ -175,7 +175,7 @@ public class FriendSystem {
 						PacketBufferNode var3 = Archive.method4265(ClientPacket.field2291, Client.packetWriter.isaacCipher);
 						var3.packetBuffer.writeByte(Huffman.stringCp1252NullTerminatedByteSize(var1));
 						var3.packetBuffer.writeStringCp1252NullTerminated(var1);
-						Client.packetWriter.method2219(var3);
+						Client.packetWriter.writePacket(var3);
 					}
 				}
 			}
@@ -244,7 +244,7 @@ public class FriendSystem {
 					PacketBufferNode var3 = Archive.method4265(ClientPacket.field2224, Client.packetWriter.isaacCipher);
 					var3.packetBuffer.writeByte(Huffman.stringCp1252NullTerminatedByteSize(var1));
 					var3.packetBuffer.writeStringCp1252NullTerminated(var1);
-					Client.packetWriter.method2219(var3);
+					Client.packetWriter.writePacket(var3);
 				}
 
 				VertexNormal.method2972();
@@ -267,7 +267,7 @@ public class FriendSystem {
 					PacketBufferNode var3 = Archive.method4265(ClientPacket.field2231, Client.packetWriter.isaacCipher);
 					var3.packetBuffer.writeByte(Huffman.stringCp1252NullTerminatedByteSize(var1));
 					var3.packetBuffer.writeStringCp1252NullTerminated(var1);
-					Client.packetWriter.method2219(var3);
+					Client.packetWriter.writePacket(var3);
 				}
 
 				class2.method28();

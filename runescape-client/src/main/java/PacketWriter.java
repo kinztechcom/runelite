@@ -72,12 +72,14 @@ public class PacketWriter {
 	@ObfuscatedSignature(
 		signature = "Lgc;"
 	)
-	ServerPacket field1309;
+	@Export("currentIncomingPacket")
+	ServerPacket currentIncomingPacket;
 	@ObfuscatedName("x")
 	@ObfuscatedSignature(
 		signature = "Lgc;"
 	)
-	ServerPacket field1321;
+	@Export("previousIncomingPacket")
+	ServerPacket previousIncomingPacket;
 	@ObfuscatedName("r")
 	@ObfuscatedSignature(
 		signature = "Lgc;"
@@ -139,7 +141,8 @@ public class PacketWriter {
 		signature = "(Lgb;I)V",
 		garbageValue = "2067459847"
 	)
-	public final void method2219(PacketBufferNode var1) {
+	@Export("writePacket")
+	public final void writePacket(PacketBufferNode var1) {
 		this.packetBufferNodes.addFirst(var1);
 		var1.index = var1.packetBuffer.offset;
 		var1.packetBuffer.offset = 0;

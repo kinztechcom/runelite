@@ -318,7 +318,7 @@ public class WorldMapElement extends DualNode {
 			return;
 		}
 		PacketBufferNode var1 = Archive.method4265(ClientPacket.field2225, Client.packetWriter.isaacCipher);
-		Client.packetWriter.method2219(var1);
+		Client.packetWriter.writePacket(var1);
 
 		try {
 			Client.packetWriter.method2234();

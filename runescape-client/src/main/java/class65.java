@@ -435,7 +435,7 @@ public class class65 extends RouteStrategy {
 			PacketBufferNode var1 = Archive.method4265(ClientPacket.field2286, Client.packetWriter.isaacCipher);
 			var1.packetBuffer.writeByte(Huffman.stringCp1252NullTerminatedByteSize(var0));
 			var1.packetBuffer.writeStringCp1252NullTerminated(var0);
-			Client.packetWriter.method2219(var1);
+			Client.packetWriter.writePacket(var1);
 		}
 	}
 }

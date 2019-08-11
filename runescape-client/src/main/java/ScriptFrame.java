@@ -358,7 +358,7 @@ public class ScriptFrame {
 		PacketBufferNode var2 = Archive.method4265(ClientPacket.field2273, Client.packetWriter.isaacCipher);
 		var2.packetBuffer.writeIntLE16(parentID);
 		var2.packetBuffer.method5530(childID);
-		Client.packetWriter.method2219(var2);
+		Client.packetWriter.writePacket(var2);
 	}
 
 	@ObfuscatedName("js")
@@ -369,6 +369,6 @@ public class ScriptFrame {
 	static final void method1089() {
 		PacketBufferNode var0 = Archive.method4265(ClientPacket.field2286, Client.packetWriter.isaacCipher);
 		var0.packetBuffer.writeByte(0);
-		Client.packetWriter.method2219(var0);
+		Client.packetWriter.writePacket(var0);
 	}
 }

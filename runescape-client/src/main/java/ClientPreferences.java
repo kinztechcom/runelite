@@ -243,7 +243,7 @@ public class ClientPreferences {
 			var18.packetBuffer.writeByte(Client.publicChatMode);
 			var18.packetBuffer.writeByte(class226.privateChatMode.field3815);
 			var18.packetBuffer.writeByte(Client.tradeChatMode);
-			Client.packetWriter.method2219(var18);
+			Client.packetWriter.writePacket(var18);
 			return 1;
 		}
 		String var3;
@@ -258,7 +258,7 @@ public class ClientPreferences {
 			var6.packetBuffer.writeStringCp1252NullTerminated(var3);
 			var6.packetBuffer.writeByte(var4 - 1);
 			var6.packetBuffer.writeByte(var5);
-			Client.packetWriter.method2219(var6);
+			Client.packetWriter.writePacket(var6);
 			return 1;
 		}
 		int var10;
@@ -440,7 +440,7 @@ public class ClientPreferences {
 			var8.packetBuffer.writeByte(var7);
 			Skeleton.method3063(var8.packetBuffer, var3);
 			var8.packetBuffer.writeLengthByte(var8.packetBuffer.offset - var9);
-			Client.packetWriter.method2219(var8);
+			Client.packetWriter.writePacket(var8);
 			return 1;
 		}
 		if (var0 == ScriptOpcodes.CHAT_SENDPRIVATE) {
@@ -453,7 +453,7 @@ public class ClientPreferences {
 			var11.packetBuffer.writeStringCp1252NullTerminated(var3);
 			Skeleton.method3063(var11.packetBuffer, var12);
 			var11.packetBuffer.writeLengthShort(var11.packetBuffer.offset - var13);
-			Client.packetWriter.method2219(var11);
+			Client.packetWriter.writePacket(var11);
 			return 1;
 		}
 		if (var0 == ScriptOpcodes.CHAT_PLAYERNAME) {

@@ -448,7 +448,7 @@ public class WorldMapIcon_0 extends AbstractWorldMapIcon {
 					var13.packetBuffer.writeShort(Client.localPlayer.x);
 					var13.packetBuffer.writeShort(Client.localPlayer.y);
 					var13.packetBuffer.writeByte(63);
-					Client.packetWriter.method2219(var13);
+					Client.packetWriter.writePacket(var13);
 					Client.destinationX = var11;
 					Client.destinationY = var12;
 				}

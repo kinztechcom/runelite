@@ -53,22 +53,22 @@ public class class81 {
 					var8 = Archive.method4265(ClientPacket.field2250, Client.packetWriter.isaacCipher);
 					var8.packetBuffer.writeShort(var3[var6]);
 					var8.packetBuffer.method5521(0);
-					Client.packetWriter.method2219(var8);
+					Client.packetWriter.writePacket(var8);
 				} else if (var0 == 4) {
 					var8 = Archive.method4265(ClientPacket.field2230, Client.packetWriter.isaacCipher);
 					var8.packetBuffer.method5475(var3[var6]);
 					var8.packetBuffer.method5521(0);
-					Client.packetWriter.method2219(var8);
+					Client.packetWriter.writePacket(var8);
 				} else if (var0 == 6) {
 					var8 = Archive.method4265(ClientPacket.field2257, Client.packetWriter.isaacCipher);
 					var8.packetBuffer.method5530(var3[var6]);
 					var8.packetBuffer.method5502(0);
-					Client.packetWriter.method2219(var8);
+					Client.packetWriter.writePacket(var8);
 				} else if (var0 == 7) {
 					var8 = Archive.method4265(ClientPacket.field2278, Client.packetWriter.isaacCipher);
 					var8.packetBuffer.method5502(0);
 					var8.packetBuffer.writeShortLE(var3[var6]);
-					Client.packetWriter.method2219(var8);
+					Client.packetWriter.writePacket(var8);
 				}
 
 				var4 = true;

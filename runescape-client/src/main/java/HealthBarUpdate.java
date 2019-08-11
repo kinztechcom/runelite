@@ -238,6 +238,6 @@ public class HealthBarUpdate extends Node {
 		var0.packetBuffer.writeByte(AbstractWorldMapIcon.getWindowedMode());
 		var0.packetBuffer.writeShort(GrandExchangeEvent.canvasWidth);
 		var0.packetBuffer.writeShort(ParamDefinition.canvasHeight);
-		Client.packetWriter.method2219(var0);
+		Client.packetWriter.writePacket(var0);
 	}
 }

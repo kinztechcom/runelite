@@ -101,7 +101,7 @@ public class class30 {
 
 			PacketBufferNode var12 = Archive.method4265(ClientPacket.field2220, Client.packetWriter.isaacCipher);
 			var12.packetBuffer.writeInt(var10);
-			Client.packetWriter.method2219(var12);
+			Client.packetWriter.writePacket(var12);
 			return 1;
 		}
 		PacketBufferNode var14;
@@ -110,7 +110,7 @@ public class class30 {
 			var14 = Archive.method4265(ClientPacket.field2298, Client.packetWriter.isaacCipher);
 			var14.packetBuffer.writeByte(var3.length() + 1);
 			var14.packetBuffer.writeStringCp1252NullTerminated(var3);
-			Client.packetWriter.method2219(var14);
+			Client.packetWriter.writePacket(var14);
 			return 1;
 		}
 		if (var0 == ScriptOpcodes.RESUME_STRINGDIALOG) {
@@ -118,7 +118,7 @@ public class class30 {
 			var14 = Archive.method4265(ClientPacket.field2211, Client.packetWriter.isaacCipher);
 			var14.packetBuffer.writeByte(var3.length() + 1);
 			var14.packetBuffer.writeStringCp1252NullTerminated(var3);
-			Client.packetWriter.method2219(var14);
+			Client.packetWriter.writePacket(var14);
 			return 1;
 		}
 		String var7;
@@ -169,7 +169,7 @@ public class class30 {
 			var15 = Interpreter.Interpreter_intStack[--HealthBarUpdate.Interpreter_intStackSize];
 			var14 = Archive.method4265(ClientPacket.field2245, Client.packetWriter.isaacCipher);
 			var14.packetBuffer.writeShort(var15);
-			Client.packetWriter.method2219(var14);
+			Client.packetWriter.writePacket(var14);
 			return 1;
 		}
 		if (var0 == ScriptOpcodes.BUG_REPORT) {
@@ -188,7 +188,7 @@ public class class30 {
 			var6.packetBuffer.writeStringCp1252NullTerminated(var7);
 			var6.packetBuffer.writeByte(var15);
 			var6.packetBuffer.writeStringCp1252NullTerminated(var5);
-			Client.packetWriter.method2219(var6);
+			Client.packetWriter.writePacket(var6);
 			return 1;
 		}
 		if (var0 == ScriptOpcodes.SETSHIFTCLICKDROP) {

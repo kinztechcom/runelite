@@ -39,6 +39,7 @@ public interface Entity extends Node
 	 */
 	int getModelHeight();
 
+
 	void setModelHeight(int modelHeight);
 
 	void draw(int orientation, int pitchSin, int pitchCos, int yawSin, int yawCos, int x, int y, int z, long hash);

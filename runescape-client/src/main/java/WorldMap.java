@@ -477,7 +477,7 @@ public class WorldMap {
 					if (var9) {
 						PacketBufferNode var12 = Archive.method4265(ClientPacket.field2248, Client.packetWriter.isaacCipher);
 						var12.packetBuffer.writeIntME(this.mouseCoord.packed());
-						Client.packetWriter.method2219(var12);
+						Client.packetWriter.writePacket(var12);
 						this.field3982 = 0L;
 					}
 				}

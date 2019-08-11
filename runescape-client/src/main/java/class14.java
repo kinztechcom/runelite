@@ -53,7 +53,7 @@ public class class14 {
 		var2.packetBuffer.writeByte(Huffman.stringCp1252NullTerminatedByteSize(var0) + 1);
 		var2.packetBuffer.writeStringCp1252NullTerminated(var0);
 		var2.packetBuffer.writeByte(var1);
-		Client.packetWriter.method2219(var2);
+		Client.packetWriter.writePacket(var2);
 	}
 
 	@ObfuscatedName("kk")

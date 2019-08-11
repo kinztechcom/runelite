@@ -183,7 +183,7 @@ public class MixinInjector
 			}
 			catch (IOException ex)
 			{
-				throw new InjectionException(ex);
+				throw new InjectionException(mixinClass + " not found", ex);
 			}
 
 			List<ClassFile> targetCfs = mixinClasses.get(mixinClass);

@@ -13,7 +13,7 @@ public class class219 {
 		PacketBufferNode var1 = Archive.method4265(ClientPacket.field2210, Client.packetWriter.isaacCipher);
 		var1.packetBuffer.writeByte(Huffman.stringCp1252NullTerminatedByteSize(var0));
 		var1.packetBuffer.writeStringCp1252NullTerminated(var0);
-		Client.packetWriter.method2219(var1);
+		Client.packetWriter.writePacket(var1);
 	}
 
 	@ObfuscatedName("gd")
