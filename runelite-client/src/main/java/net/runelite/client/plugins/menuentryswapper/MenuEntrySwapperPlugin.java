@@ -1124,8 +1124,8 @@ public class MenuEntrySwapperPlugin extends Plugin
 
 		if (this.getSwapConstructionCape)
 		{
-			menuManager.addPriorityEntry(this.constructionCapeMode.toString(), "Construct. cape");
-			menuManager.addPriorityEntry(this.constructionCapeMode.toString(), "Construct. cape(t)");
+			menuManager.addPriorityEntry(this.constructionCapeMode.toString(), "Construct. cape").setPriority(100);
+			menuManager.addPriorityEntry(this.constructionCapeMode.toString(), "Construct. cape(t)").setPriority(100);
 		}
 
 		if (this.getSwapMagicCape)
@@ -1174,7 +1174,7 @@ public class MenuEntrySwapperPlugin extends Plugin
 
 		if (this.swapAssignment)
 		{
-			menuManager.addPriorityEntry("Assignment");
+			menuManager.addPriorityEntry("Assignment").setPriority(100);
 		}
 
 		if (this.swapPlank)
@@ -1215,7 +1215,7 @@ public class MenuEntrySwapperPlugin extends Plugin
 		if (this.swapPay)
 		{
 			menuManager.addPriorityEntry("Pay");
-			menuManager.addPriorityEntry("Pay (");
+			menuManager.addPriorityEntry("Pay (", false);
 		}
 
 		if (this.swapQuick)
@@ -1360,7 +1360,7 @@ public class MenuEntrySwapperPlugin extends Plugin
 				menuManager.addPriorityEntry("Configure", "Fairy ring");
 				break;
 			case LAST_DESTINATION:
-				menuManager.addPriorityEntry("Last-destination");
+				menuManager.addPriorityEntry("Last-destination", false);
 				break;
 		}
 
@@ -1407,54 +1407,52 @@ public class MenuEntrySwapperPlugin extends Plugin
 
 		if (this.getCombatBracelet)
 		{
-			menuManager.addPriorityEntry(this.getCombatBraceletMode.toString());
+			menuManager.addPriorityEntry(new EquipmentComparableEntry(this.getCombatBraceletMode.toString(), "combat bracelet"));
 		}
 
 		if (this.getGamesNecklace)
 		{
-			menuManager.addPriorityEntry(this.getGamesNecklaceMode.toString());
+			menuManager.addPriorityEntry(new EquipmentComparableEntry(this.getGamesNecklaceMode.toString(), "games necklace"));
 		}
 
 		if (this.getDuelingRing)
 		{
-			menuManager.addPriorityEntry(this.getDuelingRingMode.toString());
+			menuManager.addPriorityEntry(new EquipmentComparableEntry(this.getDuelingRingMode.toString(), "ring of dueling"));
 		}
 
 		if (this.getGlory)
 		{
-			menuManager.addPriorityEntry(this.getGloryMode.toString());
-			menuManager.addPriorityEntry(this.getGloryMode.toString());
+			menuManager.addPriorityEntry(new EquipmentComparableEntry(this.getGloryMode.toString(), "glory"));
 		}
 
 		if (this.getSkillsNecklace)
 		{
-			menuManager.addPriorityEntry(this.getSkillsNecklaceMode.toString());
+			menuManager.addPriorityEntry(new EquipmentComparableEntry(this.getSkillsNecklaceMode.toString(), "skills necklace"));
 		}
 
 		if (this.getNecklaceofPassage)
 		{
-			menuManager.addPriorityEntry(this.getNecklaceofPassageMode.toString());
+			menuManager.addPriorityEntry(new EquipmentComparableEntry(this.getNecklaceofPassageMode.toString(), "necklace of passage"));
 		}
 
 		if (this.getDigsitePendant)
 		{
-			menuManager.addPriorityEntry(this.getDigsitePendantMode.toString());
+			menuManager.addPriorityEntry(new EquipmentComparableEntry(this.getDigsitePendantMode.toString(), "digsite pendant"));
 		}
 
 		if (this.getSlayerRing)
 		{
-			menuManager.addPriorityEntry(this.getSlayerRingMode.toString());
-			menuManager.addPriorityEntry(this.getSlayerRingMode.toString());
+			menuManager.addPriorityEntry(new EquipmentComparableEntry(this.getSlayerRingMode.toString(), "slayer ring"));
 		}
 
 		if (this.getXericsTalisman)
 		{
-			menuManager.addPriorityEntry(this.getXericsTalismanMode.toString());
+			menuManager.addPriorityEntry(new EquipmentComparableEntry(this.getXericsTalismanMode.toString(), "talisman"));
 		}
 
 		if (this.getRingofWealth)
 		{
-			menuManager.addPriorityEntry(this.getRingofWealthMode.toString());
+			menuManager.addPriorityEntry(new EquipmentComparableEntry(this.getRingofWealthMode.toString(), "ring of wealth"));
 		}
 
 		if (this.swapMax)
@@ -1563,7 +1561,7 @@ public class MenuEntrySwapperPlugin extends Plugin
 		menuManager.removePriorityEntry("Transport");
 		menuManager.removePriorityEntry("Teleport", "Mage of zamorak");
 		menuManager.removePriorityEntry("Pay");
-		menuManager.removePriorityEntry("Pay (");
+		menuManager.removePriorityEntry("Pay (", false);
 		menuManager.removePriorityEntry("Quick-travel");
 		menuManager.removePriorityEntry("Enchant");
 		menuManager.removePriorityEntry("Edgeville", "Lever");
@@ -1622,7 +1620,7 @@ public class MenuEntrySwapperPlugin extends Plugin
 				menuManager.removePriorityEntry("Configure", "Fairy ring");
 				break;
 			case LAST_DESTINATION:
-				menuManager.removePriorityEntry("Last-destination");
+				menuManager.removePriorityEntry("Last-destination", false);
 				break;
 		}
 
