@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018, Tomas Slusny <slusnucky@gmail.com>
+ * Copyright (c) 2019, Owain van Brakel <https://github.com/Owain94>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -22,37 +22,43 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package net.runelite.client.plugins.lowmemory;
+package net.runelite.client.plugins.menuentryswapper;
 
-import javax.inject.Inject;
-import net.runelite.api.Client;
-import net.runelite.client.callback.ClientThread;
-import net.runelite.client.plugins.Plugin;
-import net.runelite.client.plugins.PluginDescriptor;
+import com.google.common.base.Splitter;
+import java.util.Map;
 
-@PluginDescriptor(
-	name = "Low Detail",
-	description = "Turn off ground decorations and certain textures, reducing memory usage",
-	tags = {"memory", "usage", "ground", "decorations"},
-	enabledByDefault = false
-)
-public class LowMemoryPlugin extends Plugin
+public class CustomSwapParse
 {
-	@Inject
-	private Client client;
-
-	@Inject
-	private ClientThread clientThread;
-
-	@Override
-	protected void startUp()
+	public static boolean parse(String value)
 	{
-		clientThread.invoke(() -> client.changeMemoryMode(true));
-	}
+		try
+		{
+			final StringBuilder sb = new StringBuilder();
 
-	@Override
-	protected void shutDown()
-	{
-		clientThread.invoke(() -> client.changeMemoryMode(false));
+			for (String str : value.split("\n"))
+			{
+				if (!str.startsWith("//"))
+				{
+					sb.append(str).append("\n");
+				}
+			}
+
+			final Splitter NEWLINE_SPLITTER = Splitter
+				.on("\n")
+				.omitEmptyStrings()
+				.trimResults();
+
+			final Map<String, String> tmp = NEWLINE_SPLITTER.withKeyValueSeparator(':').split(sb);
+
+			for (String str : tmp.values())
+			{
+				Integer.parseInt(str.trim());
+			}
+			return true;
+		}
+		catch (Exception ex)
+		{
+			return false;
+		}
 	}
 }
