@@ -29,6 +29,8 @@ import net.runelite.api.Client;
 import static net.runelite.api.Opcodes.RUNELITE_EXECUTE;
 import net.runelite.api.events.ScriptCallbackEvent;
 import net.runelite.api.widgets.JavaScriptCallback;
+
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import net.runelite.api.mixins.Copy;
@@ -116,6 +118,7 @@ public abstract class ScriptVMMixin implements RSClient
 	@Replace("runScript")
 	static void rl$runScript(RSScriptEvent event, int maxExecutionTime)
 	{
+		//client.getLogger().info("[ClientScript] ID: {} Args: [{}]", event.getArguments()[0].toString(), Arrays.toString(event.getArguments()));
 		Object[] arguments = event.getArguments();
 		if (arguments != null && arguments.length > 0 && arguments[0] instanceof JavaScriptCallback)
 		{

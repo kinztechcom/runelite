@@ -175,6 +175,8 @@ public class WidgetInfoTableModel extends AbstractTableModel
 		out.add(new WidgetField<>("RelativeY", Widget::getRelativeY, Widget::setRelativeY, Integer.class));
 		out.add(new WidgetField<>("Width", Widget::getWidth, Widget::setWidth, Integer.class));
 		out.add(new WidgetField<>("Height", Widget::getHeight, Widget::setHeight, Integer.class));
+		out.add(new WidgetField<>("Actions", Widget::getActions));
+		out.add(new WidgetField<>("Masks", Widget::getClickMask));
 		out.add(new WidgetField<>("CanvasLocation", Widget::getCanvasLocation));
 		out.add(new WidgetField<>("Bounds", Widget::getBounds));
 		out.add(new WidgetField<>("ScrollX", Widget::getScrollX, Widget::setScrollX, Integer.class));
